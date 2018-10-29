@@ -1,6 +1,8 @@
 %{
+
   #include <stdio.h>
   int numLines = 0;
+  
 %}
 
 %%
@@ -17,6 +19,7 @@ SET_COLOR            { printf("SET COLOR\n"); }
 \s                   // ignore
 \n                   numLines++;
 .                    { printf("ERROR IN LINE %d\n", numLines);}
+
 %%
 
 int main(int argc, char** argv){
