@@ -16,7 +16,7 @@ RECTANGLE            { printf("RECTANGLE\n"); }
 SET_COLOR            { printf("SET COLOR\n"); }
 [0-9]+               { printf("INT\n"); }
 [0-9]+\.[0-9]+       { printf("FLOAT\n"); }
-\s                   // ignore
+[ | \t]               // ignore
 \n                   numLines++;
 .                    { printf("ERROR IN LINE %d\n", numLines);}
 
