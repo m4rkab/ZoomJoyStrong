@@ -13,7 +13,7 @@ CIRCLE               { printf("CIRCLE\n"); }
 RECTANGLE            { printf("RECTANGLE\n"); }
 SET_COLOR            { printf("SET COLOR\n"); }
 [0-9]+               { printf("INT\n"); }
-[0-9]+\.[0-9]+      { printf("FLOAT\n"); }
+[0-9]+\.[0-9]+       { printf("FLOAT\n"); }
 \s                   // ignore
 \n                   numLines++;
 .                    { printf("ERROR IN LINE %d\n", numLines);}
